@@ -18,5 +18,10 @@ describe("starwars", () => {
 
       expect(starwars.all).to.include(first);
     });
+
+    it("should be a return an array of random people", () => {
+      const people = starwars.random(3);
+      people.forEach(person => expect(starwars.all).to.include(person));
+    });
   });
 });

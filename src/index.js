@@ -6,8 +6,16 @@ const names = people.reduce((previousValue, currentValue) => {
 }, []);
 
 const all = names;
-const random = () => {
-  return names[Math.floor(Math.random() * names.length)];
+const random = number => {
+  if (number) {
+    result = [];
+    for (let i = 0; i < number; i++) {
+      result.push(names[Math.floor(Math.random() * names.length)]);
+    }
+    return result;
+  } else {
+    return names[Math.floor(Math.random() * names.length)];
+  }
 };
 
 module.exports = {
