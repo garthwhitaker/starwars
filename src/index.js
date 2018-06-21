@@ -1,4 +1,5 @@
 const people = require("./starwars-people.json");
+const ships = require("./starships.json");
 
 const names = people.reduce((previousValue, currentValue) => {
   previousValue.push(currentValue.name);
@@ -18,7 +19,14 @@ const random = number => {
   }
 };
 
+const starships = () => {
+  return starships.reduce((previousValue, currentValue) => {
+    previousValue.push(currentValue.name);
+    return previousValue;
+  }, []);
+};
 module.exports = {
   all,
-  random
+  random,
+  starships
 };
