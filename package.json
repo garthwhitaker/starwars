@@ -1,14 +1,17 @@
 {
   "name": "starwars_garth_whitaker",
-  "version": "1.2.0",
+  "version": "0.0.0-development",
   "description": "Get star wars people ",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/garthwhitaker/starwars.git"
+    "url": "https://github.com/garthwhitaker/starwars.git"
   },
   "keywords": [
     "star",
@@ -20,5 +23,16 @@
   "bugs": {
     "url": "https://github.com/garthwhitaker/starwars/issues"
   },
-  "homepage": "https://github.com/garthwhitaker/starwars#readme"
+  "homepage": "https://github.com/garthwhitaker/starwars#readme",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "commitizen": "2.10.1",
+    "cz-conventional-changelog": "2.1.0",
+    "mocha": "5.2.0",
+    "semantic-release": "^15.6.0",
+    "travis-deploy-once": "^5.0.0"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
