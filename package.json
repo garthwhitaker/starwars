@@ -7,7 +7,7 @@
     "commit": "git-cz",
     "test:watch": "mocha src/index.test.js -w",
     "test": "mocha src/index.test.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release && npm publish",
     "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
