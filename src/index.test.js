@@ -1,5 +1,5 @@
-const starwars = require("./index");
-const expect = require("chai").expect;
+import starwars from "./index";
+import { expect } from "chai";
 
 describe("starwars", () => {
   function isArrayOfStrings(items) {
@@ -18,7 +18,7 @@ describe("starwars", () => {
       expect(starwars.all).to.include(first);
     });
 
-    it("should be a return an array of random people", () => {
+    it("should return an array of random people", () => {
       const people = starwars.random(3);
       people.forEach(person => expect(starwars.all).to.include(person));
     });

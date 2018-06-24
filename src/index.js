@@ -1,5 +1,5 @@
-const people = require("./starwars-people.json");
-const ships = require("./starships.json");
+import people from "./starwars-people.json";
+import ships from "./starships.json";
 
 const names = people.reduce((previousValue, currentValue) => {
   previousValue.push(currentValue.name);
@@ -9,7 +9,7 @@ const names = people.reduce((previousValue, currentValue) => {
 const all = names;
 const random = number => {
   if (number) {
-    result = [];
+    let result = [];
     for (let i = 0; i < number; i++) {
       result.push(names[Math.floor(Math.random() * names.length)]);
     }
