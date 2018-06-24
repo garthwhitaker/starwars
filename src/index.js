@@ -20,7 +20,7 @@ const random = number => {
 };
 
 const starships = () => {
-  return starships.reduce((previousValue, currentValue) => {
+  return ships.reduce((previousValue, currentValue) => {
     previousValue.push(currentValue.name);
     return previousValue;
   }, []);
