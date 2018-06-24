@@ -6,6 +6,9 @@ notifications:
   email: false
 node_js:
   - '9'
+branches:
+  only:
+    - master
 script:
   - npm run cover
   - npm run check-coverage
