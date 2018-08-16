@@ -12,4 +12,15 @@
 
 ## Description
 
-Get random star wars people and ships
+Get random star wars people,  ships and planets
+
+### Usage
+``` javascript
+import starwars from "./index";
+
+const people = starwars.all;
+const randomPerson = starwars.random();
+const planets = starwars.planets;
+const starships = starwars.starships;
+
+```
