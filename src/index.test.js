@@ -30,4 +30,11 @@ describe("starwars", () => {
       expect(starships).to.satisfy(isArrayOfStrings);
     });
   });
+
+  describe("planets", () => {
+    it("should return a array of planets", () => {
+      const planets = starwars.planets();
+      expect(planets).to.satisfy(isArrayOfStrings);
+    });
+  });
 });

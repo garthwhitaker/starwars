@@ -1,5 +1,6 @@
 import people from "./starwars-people.json";
 import ships from "./starships.json";
+import planets from './planets.json';
 
 const names = people.reduce((previousValue, currentValue) => {
   previousValue.push(currentValue.name);
@@ -25,8 +26,17 @@ const starships = () => {
     return previousValue;
   }, []);
 };
+
+const starwarsPlanets = () => {
+  return planets.reduce((previousValue, currentValue) => {
+    previousValue.push(currentValue.name);
+    return previousValue;
+  }, []);
+}
+
 module.exports = {
   all,
   random,
-  starships
+  starships,
+  planets: starwarsPlanets
 };
